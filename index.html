@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Antic+Slab&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="menu">
+        <ul>
+            <li>
+                <div class="menu1"><a href="page2.html">Page2</a> </div>
+            </li>
+            <li>
+                <div class="menu1"><a href="#">Page3</a></div>
+            </li>
+
+        </ul>
+    </div>
+    <main>
+
+        <section class="glass">
+            <div id="text1" class="text">
+                <h1 id="text1h">Hello</h1>
+                <p id="text1p">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima dolorum neque maxime doloremque
+                    maiores exercitationem sunt aliquid tempore. Vero, mollitia! Nobis et impedit soluta ex officia fuga
+                    deserunt consectetur totam.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima dolorum neque maxime doloremque
+                    maiores exercitationem sunt aliquid tempore. Vero, mollitia! Nobis et impedit soluta ex officia fuga
+                    deserunt consectetur totam.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima dolorum neque maxime doloremque
+                    maiores exercitationem sunt aliquid tempore. Vero, mollitia! Nobis et impedit soluta ex officia fuga
+                    deserunt consectetur totam.
+
+                </p>
+                <div class="picd">
+                    <img class="pic" src="pic.PNG" alt="">
+                    <img class="pic2" src="pic2.PNG" alt="">
+                    <img class="pic3" src="pic3.PNG" alt="">
+
+                </div>
+                <p id="text1p-2" class="text1p-21">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima dolorum neque maxime doloremque
+                    maiores exercitationem sunt aliquid tempore. Vero, mollitia! Nobis et impedit soluta ex officia fuga
+                    deserunt consectetur totam.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima dolorum neque maxime doloremque
+                    maiores exercitationem sunt aliquid tempore. Vero, mollitia! Nobis et impedit soluta ex officia fuga
+                    deserunt consectetur totam.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima dolorum neque maxime doloremque
+                    maiores exercitationem sunt aliquid tempore. Vero, mollitia! Nobis et impedit soluta ex officia fuga
+                    deserunt consectetur totam.
+
+                </p>
+                <a href="#" id="button1"><img class="nexticon" src="right-arrow.png" alt=""></a>
+                <a href="#" id="button2"><img class="nexticon2" src="right-arrow.png" alt=""></a>
+
+            </div>
+
+        </section>
+        <a href="#" id="lightud"> <img class="light" src="lightbulb.png" alt=""></a>
+
+    </main>
+
+    <div id="c1" class="circle1"></div>
+    <div id="c2" class="circle2"></div>
+
+</body>
+
+</html>
+
+<script>
+
+
+    $('#button1').on('click', function () {
+
+        if ($('#c1').hasClass('circle1')) {
+
+            $('#c1').addClass('circle1-out');
+        }
+        if ($('#c2').hasClass('circle2')) {
+
+            $('#c2').addClass('circle2-out');
+        }
+        if ($('#text1').hasClass('text')) {
+
+            $('#text1').addClass('text-out');
+
+
+
+        }
+        $('.nexticon').css('display', 'none');
+        $('.nexticon2').css('display', 'unset');
+        $('.pic').addClass('picin');
+        $('.pic2').addClass('pic2in');
+        $('.pic3').addClass('pic3in');
+        $('.picd').css('display', 'unset');
+
+        $(document).ready(function () {
+            $('#text1h').text('@phucs2612');
+
+        });
+    });
+    $('#button2').on('click', function () {
+
+
+        $('#text1p-2').addClass('text1p-2-in');
+
+
+        if ($('#text1p-2').hasClass('text1p-21')) {
+
+            $('#text1p-2').addClass('text1p-21-in');
+            $('#text1p-2').removeClass('text1p-21');
+
+        }
+        $('.nexticon').css('display', 'none');
+        $('.nexticon2').css('display', 'none');
+        $('.pic').addClass('picout');
+        $('.pic2').addClass('pic2out');
+        $('.pic3').addClass('pic3out');
+    });
+    $('#lightud').on('click', function () {
+        if ($('main').hasClass('maindark')) {
+            $('main').removeClass('maindark');
+            $('a').css('color', 'black');
+            $('h1').css('color', 'black');
+            $('#lightud').css('color', 'black');
+        }
+        else {
+            $('main').addClass('maindark');
+            $('a').css('color', 'white');
+            $('h1').css('color', 'white');
+            $('#lightud').css('color', 'white');
+        }
+    });
+</script>
